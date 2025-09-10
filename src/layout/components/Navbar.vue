@@ -6,7 +6,7 @@ import SearchIcon from "@/components/c-icons/SearchIcon.vue";
 <template>
   <div class="flex gap-2 p-2  px-4">
     <div>
-      <div class="font-semibold text-2xl">Online Shop</div>
+      <div class="font-semibold text-2xl">Online Shops</div>
     </div>
     <div class="flex-1 flex items-center justify-end gap-4">
       <div>
