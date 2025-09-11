@@ -3,37 +3,13 @@ import HeartIcon from "@/components/c-icons/HeartIcon.vue";
 import CButton from "../c-button/CButton.vue";
 import type { IProduct } from "@/composable/useGetListProductList";
 import HeartFillIcon from "@/components/c-icons/HeartFillIcon.vue";
+import getRandomBgColor from "@/helper/getRandomBgColor";
+import router from "@/router";
 
 const props = defineProps<{ product: IProduct }>();
 const emits = defineEmits(["buyNow"]);
 
-let lastColor: any = null;
 
-function getRandomBgColor() {
-  const colors = [
-    "bg-orange-400/15",
-    "bg-green-400/15",
-    "bg-red-400/15",
-    "bg-blue-400/15",
-    "bg-purple-400/15",
-    "bg-pink-400/15",
-    "bg-yellow-400/15",
-    "bg-teal-400/15",
-  ];
-
-  let newColor;
-  do {
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    newColor = colors[randomIndex];
-  } while (newColor === lastColor);
-
-  lastColor = newColor;
-  return newColor;
-}
-
-const onBuyNow = () => {
-  emits("buyNow");
-};
 </script>
 <template>
   <router-link :to="`/product/${product.id}`">
@@ -52,11 +28,11 @@ const onBuyNow = () => {
           {{ props.product.title }}
         </p>
         <div class="flex justify-between">
-          <h3 class="font-semibold text-orange-500 text-lg">
+          <h3 class="font-semibold text-primary text-lg">
             {{ props.product.price }}
           </h3>
           <div>
-            <CButton @click="onBuyNow" color="secondary"> Buy </CButton>
+            <CButton @click="router.push(`/checkout/${product.id}`)" color="secondary"> Buy </CButton>
           </div>
         </div>
       </article>

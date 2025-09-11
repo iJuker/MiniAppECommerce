@@ -7,24 +7,21 @@ import { useInitBridge } from "./useInitBridge";
  */
 export const useBuy = () => {
   const { bridge } = useInitBridge();
-  const buyNowCallBackData = ref<any>(null);
-  const isBuying = ref(false);
+
+  const isSuccess = ref(false);
 
   onMounted(() => {
-    bridge.registerHandler("buyNowCallBack", (data: any, callback: any) => {
-      buyNowCallBackData.value = data;
+    bridge.registerHandler("buyNowCallBack", (data: boolean, callback: any) => {
+      isSuccess.value = data;
       callback({
         status: 200,
       });
     });
   });
 
-  const onBuyNow = (price: string) => {
-    isBuying.value = true;
-    bridge.callHandler("buyNow", { price }, () => {
-      isBuying.value = false;
-    });
+  const onBuyNow = (amount?: number) => {
+    bridge.callHandler("buyNow", { amount });
   };
 
-  return { isBuying, buyNowCallBackData, onBuyNow };
+  return { isSuccess, onBuyNow };
 };

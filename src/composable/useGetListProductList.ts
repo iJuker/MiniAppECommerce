@@ -34,6 +34,7 @@ export function useGetProductList() {
 export interface IProduct {
   id: number;
   price: string;
+  priceNumber: number;
   title: string;
   description: string;
   imgSrc: string;

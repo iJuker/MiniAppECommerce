@@ -2,6 +2,7 @@
   {
     "id": 1,
     "price": "$ 799.00",
+    "priceNumber": 799,
     "title": "iPhone 12",
     "description": "Apple iPhone 12 with 6.1-inch display, A14 Bionic chip, and dual-camera system.",
     "imgSrc": "/products/iphone12.jpg",
@@ -11,6 +12,7 @@
   {
     "id": 2,
     "price": "$ 699.00",
+    "priceNumber": 699,
     "title": "iPhone 12 Mini",
     "description": "Compact Apple iPhone 12 Mini with 5.4-inch display and A14 Bionic chip.",
     "imgSrc": "/products/iphone12-mini.jpg",
@@ -20,6 +22,7 @@
   {
     "id": 3,
     "price": "$ 599.00",
+    "priceNumber": 599,
     "title": "Motorola Edge",
     "description": "Motorola Edge with 6.7-inch display, Snapdragon processor, and triple-camera system.",
     "imgSrc": "/products/motorola.jpg",
@@ -29,6 +32,7 @@
   {
     "id": 4,
     "price": "$ 1,199.00",
+    "priceNumber": 1199,
     "title": "Galaxy S30 Ultra",
     "description": "Samsung Galaxy S30 Ultra with 6.9-inch display, 200MP camera, and Snapdragon processor.",
     "imgSrc": "/products/s30-ultra.jpg",
@@ -38,6 +42,7 @@
   {
     "id": 5,
     "price": "$ 549.00",
+    "priceNumber": 549,
     "title": "Samsung A56",
     "description": "Samsung Galaxy A56 mid-range smartphone with AMOLED display and long battery life.",
     "imgSrc": "/products/samsung-galaxy-a56.jpg",
@@ -47,6 +52,7 @@
   {
     "id": 6,
     "price": "$ 999.00",
+    "priceNumber": 999,
     "title": "Samsung S25",
     "description": "Samsung Galaxy S25 with flagship design, high refresh rate display, and 5G support.",
     "imgSrc": "/products/samsung-galaxy-s25.jpg",
@@ -56,6 +62,7 @@
   {
     "id": 7,
     "price": "$ 459.00",
+    "priceNumber": 459,
     "title": "iPhone SE (2022)",
     "description": "Affordable Apple iPhone SE with A15 Bionic chip and compact 4.7-inch display.",
     "imgSrc": "/products/m70rs.jpg",
@@ -65,6 +72,7 @@
   {
     "id": 8,
     "price": "$ 649.00",
+    "priceNumber": 649,
     "title": "Motorola G Stylus",
     "description": "Motorola G Stylus with built-in stylus, large display, and reliable performance.",
     "imgSrc": "/products/oukitel-c58.jpg",

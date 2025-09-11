@@ -12,7 +12,6 @@ const route = useRoute();
 function isActive(path: string) {
   return route.path === path;
 }
-
 </script>
 <template>
   <!-- <nav>
@@ -24,7 +23,7 @@ function isActive(path: string) {
       <li>
         <router-link to="/">
           <div
-            :class="{ ' !text-black ': isActive('/') }"
+            :class="{ ' !text-primary ': isActive('/') }"
             class="flex cursor-pointer flex-col justify-center text-center items-center font-semibold text-gray-600"
           >
             <div>
@@ -38,7 +37,7 @@ function isActive(path: string) {
       <li>
         <router-link to="/cart">
           <div
-            :class="{ ' !text-black': isActive('/cart') }"
+            :class="{ ' !text-primary': isActive('/cart') }"
             class="flex cursor-pointer flex-col justify-center text-center items-center font-semibold text-gray-600"
           >
             <div>
@@ -52,7 +51,7 @@ function isActive(path: string) {
       <li>
         <router-link to="/setting">
           <div
-            :class="{ ' !text-black': isActive('/setting') }"
+            :class="{ ' !text-primary': isActive('/setting') }"
             class="flex cursor-pointer flex-col justify-center text-center items-center font-semibold text-gray-600"
           >
             <div>
