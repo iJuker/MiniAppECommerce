@@ -58,6 +58,9 @@ onMounted(() => {
         </section>
       </div>
       <footer class="bg-primary/5 p-4 rounded-lg">
+         <div>
+        Payment Callback: {{ String(isSuccess) }}
+      </div>
         <h2 class="text-xl font-bold pb-4 text-right flex gap-2 justify-between">
           <div class="text-gray-500">Total</div>
           <div class="text-primary-dark">{{ data?.price }}</div>
