@@ -39,7 +39,7 @@ function handleClick(event: MouseEvent) {
     @click="handleClick"
     type="button"
     :class="[colors[props.color ?? 'default'], { 'w-full !rounded-lg py-2': props.isFull }]"
-    class="px-4 py-1 rounded-full text-xs"
+    class="px-4 py-1 cursor-pointer rounded-full text-xs"
   >
     <slot />
   </button>

@@ -2,6 +2,7 @@
 import CButton from "@/components/shared/c-button/CButton.vue";
 import CLoading from "@/components/shared/c-loading/CLoading.vue";
 import CPageStatusSuccess from "@/components/shared/c-page-status/CPageStatusSuccess.vue";
+import CPageStatusFail from "@/components/shared/c-page-status/CPageStatusFail.vue";
 import CProductItemList from "@/components/shared/c-product-item-list/CProductItemList.vue";
 import { useBuy } from "@/composable/bridge-getway/useBuy";
 import { useGetListProductDetail } from "@/composable/useGetListProductDetail";
@@ -13,7 +14,7 @@ const { data, loading, fetchData } = useGetListProductDetail();
 
 const route = useRoute();
 
-const { isSuccess,onBuyNow } = useBuy();
+const { isSuccess, isFailed, paymentCompleted, paymentFailed, onBuyNow } = useBuy();
 
 onMounted(() => {
   fetchData(+route.params.id);
@@ -21,7 +22,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <CPageStatusSuccess v-if="isSuccess" />
+  <CPageStatusSuccess v-if="isSuccess" :payment="paymentCompleted" />
+  <CPageStatusFail v-else-if="isFailed" :payment="paymentFailed" />
   <Layout v-else>
     <div v-if="loading" class="h-full flex flex-col justify-center items-center">
       <CLoading />
